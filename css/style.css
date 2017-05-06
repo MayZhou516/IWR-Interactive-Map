@@ -235,6 +235,7 @@ ul {
 .legend h2 {
 	font-family: 'Rubik';
 	font-size: 12px;
+	line-height: .1em;
 }
 
 .legend h3 {
