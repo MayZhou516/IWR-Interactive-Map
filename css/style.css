@@ -307,4 +307,9 @@ ul {
 
 .overlaymenu li a{
     color: white !important;
+    transition: .3s;
+}
+
+.overlaymenu li a:hover {
+	opacity: .8 !important;
 }
