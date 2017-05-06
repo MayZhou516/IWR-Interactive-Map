@@ -178,3 +178,17 @@ ul {
 		transform: translate(0,-10px);
 		opacity: 0.0;
 	}
+
+.legend img{
+	width: 10px;
+}
+
+.legend h2 {
+	font-family: 'Rubik';
+	font-size: 12px;
+}
+
+.legend h3 {
+	font-family: 'Rubik';
+	font-size: 10px;
+}
