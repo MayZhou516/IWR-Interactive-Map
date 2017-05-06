@@ -4,6 +4,23 @@ body{
 	font-family: 'Libre Baskerville' !important;
 }
 
+.intro {
+padding-bottom: 30%;
+}
+
+.intro-header {
+	padding-top: 8%;
+	text-align: center;
+	color: #2e2e2e;
+	font: "brandon-grotesque", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: 900;
+	letter-spacing: 10px;
+}
+
+.intro-2 {
+	font-size: 24px;
+}
+
 .welcome {
 	margin-top: 5%;
 	margin-bottom: 6%;
@@ -51,6 +68,10 @@ ul {
 .welcome-2 {
 	padding-top: 4%;
 	font-size: 28px;
+}
+
+.map {
+	margin-bottom: 10%;
 }
 
 
