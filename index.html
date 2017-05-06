@@ -4,25 +4,26 @@
 	<script src="https://d3js.org/d3.v3.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 	<script src="http://d3js.org/topojson.v2.min.js"></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js'></script>
 	<script src="js/datamaps.world.min.js"></script>
-	<script type="text/javascript" src="//use.typekit.net/rws3een.js"></script>
-	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-	
-
-
 	<script src="js/d3.slider.js"></script>
-
 	<link rel="stylesheet" href="css/style.css" type="text/css">
 	<link rel="stylesheet" href="css/d3.slider.css" type="text/css">
 	<link rel="stylesheet" href="css/foundation.min.css" type="text/css">
 	<link rel="stylesheet" href="css/animate.css" type="text/css">
 	<link href="https://fonts.googleapis.com/css?family=Libre+Baskerville" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Rubik:500" rel="stylesheet">
-
-
-	<!-- // <script src="js/jquery.aniview.js"></script> -->
 	<script src="js/ScrollTrigger.min.js"></script>
 	<script>
+
+	function init() {
+	  Tabletop.init( { key: 'https://docs.google.com/spreadsheets/d/1eRJDZIT8cCOH-cLCdnL_szUqskf81yDCRBF5Kb0Ku5A/pubhtml',
+	                   callback: function(data, tabletop) { 
+		                    console.log(data);
+	                   },
+	                   simpleSheet: true } )
+	}
+	window.addEventListener('DOMContentLoaded', init)
 
 	document.addEventListener('DOMContentLoaded', function(){
 		var trigger = new ScrollTrigger({
