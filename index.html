@@ -50,13 +50,13 @@
 
 	    <ul class="overlaymenu">
 	        <li>
-	            <a href="#mapstuff">Map</a>
+	            <a class="navlink" href="#mapstuff" onclick="navlinkchange(this)">Map</a>
 	        </li>
 	        <li>
-	            <a href="#stepsto">Steps to Become a Refugee</a>
+	            <a class="navlink" href="#stepsto" onclick="navlinkchange(this)">Steps to Become a Refugee</a>
 	        </li>
         	<li>
-	            <a href="#">Sources</a>
+	            <a class="navlink" href="#" onclick="navlinkchange(this)">Sources</a>
 	        </li>
     	</ul>
 	</nav>
@@ -66,6 +66,7 @@
 		//function that creates an X to replace the menu icon, bring out navigation
 		function menuiconchange(element) {
 			//toggles whether or not the class is there based on when it is clicked
+			console.log(element);
 			element.classList.toggle('change');
 			if (opentrue == false) {
 				$(".overlaymenu").fadeIn(50);
@@ -77,8 +78,12 @@
 				opentrue = false;
 				$(".bar1,.bar2,.bar3").css("background-color", "black");
 			}
-
 		}
+
+		function navlinkchange(stuff) {
+			$('.menuicon').trigger("click");
+		}
+
 	</script>
 
 	<div class="row intro">
