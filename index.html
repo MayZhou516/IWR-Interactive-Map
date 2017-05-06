@@ -47,7 +47,37 @@
 	        <div class="bar2"></div>
 	        <div class="bar3"></div>
 	    </div>
+
+	    <ul class="overlaymenu">
+	        <li>
+	            <a href="#mapstuff">Map</a>
+	        </li>
+	        <li>
+	            <a href="#stepsto">Steps to Become a Refugee</a>
+	        </li>
+        
+    	</ul>
 	</nav>
+
+	<script>
+		var opentrue = false;
+		//function that creates an X to replace the menu icon, bring out navigation
+		function menuiconchange(element) {
+			//toggles whether or not the class is there based on when it is clicked
+			element.classList.toggle('change');
+			if (opentrue == false) {
+				$(".overlaymenu").fadeIn(50);
+				opentrue = true;
+				$(".bar1,.bar2,.bar3").css("background-color", "white");
+			}
+			else {
+				$(".overlaymenu").fadeOut(50);
+				opentrue = false;
+				$(".bar1,.bar2,.bar3").css("background-color", "black");
+			}
+
+		}
+	</script>
 
 	<div class="row intro">
 		<div>	
@@ -64,7 +94,7 @@
 
 
 
-	<div class="row map">
+	<div id="mapstuff" class="row map">
 		<div data-scroll="toggle(.fromTopIn, .fromTopOut)">
 			
 			<div class="row">
@@ -114,7 +144,7 @@
 		</div>
 	</div>
 	
-	<div class="row welcome">
+	<div id="stepsto" class="row welcome">
 		<div data-scroll="toggle(.fromTopIn, .fromTopOut)">	
 			<h1 class="welcome-header"> STEPS TO BECOME A REFUGEE </h1>
 			<p class="welcome-header2"> A SHORT LIST </p>

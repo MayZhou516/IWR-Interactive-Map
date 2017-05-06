@@ -242,3 +242,69 @@ ul {
 	font-family: 'Rubik';
 	font-size: 10px;
 }
+
+
+.menuicon {
+    position: fixed;
+    z-index: 100;
+    top: 20px;
+    left: 30px;
+    cursor: pointer;
+}
+
+.bar1,.bar2,.bar3 {
+    width: 30px;
+    height: 4px;
+    border-radius: 2px;
+    background-color: black;
+    margin: 6px 0;
+    transition: .3s;
+}
+
+/* Rotate first bar */
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-10px, 5px) ;
+    transform: rotate(-45deg) translate(-10px, 5px) ;
+    width: 35px;
+}
+
+/* Fade out the second bar */
+.change .bar2 {
+    opacity: 0;
+}
+
+/* Rotate last bar */
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -5px) ;
+    transform: rotate(45deg) translate(-8px, -5px) ;
+    width: 35px;
+}
+
+.overlaymenu {
+    padding: 4em;
+    text-align: center;
+    font-size: 24px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    text-transform: uppercase;
+    z-index: 6;
+    display: none;
+    margin-left: 0 !important;
+    font-family: "brandon-grotesque", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 900;
+    letter-spacing: 10px;
+
+}
+
+.overlaymenu li {
+    padding: .5em;
+    list-style: none;
+}
+
+.overlaymenu li a{
+    color: white !important;
+}
