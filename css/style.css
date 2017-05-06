@@ -5,7 +5,7 @@ body{
 }
 
 .intro {
-padding-bottom: 30%;
+	padding-bottom: 30%;
 }
 
 .intro-header {
@@ -88,6 +88,34 @@ ul {
 	margin: auto;
 }
 
+
+.legend img{
+	width: 10px;
+}
+
+.legend h2 {
+	font-family: 'Rubik';
+	font-size: 12px;
+	line-height: .1em;
+}
+
+.legend h3 {
+	font-family: 'Rubik';
+	font-size: 10px;
+}
+
+.center {
+	text-align: center;
+}
+
+.right {
+	text-align: right;
+}
+
+.left {
+	text-align: left;
+}
+
 .description h1{
 	text-align: left;
 	line-height: 1em;
@@ -144,53 +172,72 @@ ul {
 	font-family: 'Rubik';
 }
 
-./*center {
+.center {
 	text-align: center;
-	}*/
+}
 
-	.right {
-		text-align: right;
-	}
+.right {
+	text-align: right;
+}
 
-	.become{
-		color: white;
-		/*padding:30%;*/
-		background-color: black;
-		/*margin-top: 10%;*/
-	}
-	.logoAlign{
-		width: 400px;
-	}
-	.bigX{
-		font-size: 45px;
-		font-weight: 900;
-		margin: 8% 0;
-	}
+.left {
+	text-align: left;
+}
 
-	.aboutDescript{
-		font-size: 18px;
 
-	}
-	.aboutSection{
-		margin: 15%;
-		background-color: red;
-	}
-	.totalMap{
-		margin: 5% 0;
-	}
+.become{
+	color: white;
+	/*padding:30%;*/
+	background-color: black;
+	/*margin-top: 10%;*/
+}
+.logoAlign{
+	width: 400px;
+}
+.bigX{
+	font-size: 45px;
+	font-weight: 900;
+	margin: 8% 0;
+}
 
-	/*animations*/
+.aboutDescript{
+	font-size: 18px;
 
-	.fromTopIn
-	{
-		transition: transform 1.0s ease, opacity 1.0s ease;
-		transform: translate(0,0);
-		opacity: 1.0;
-	}
+}
+.aboutSection{
+	margin: 15%;
+	background-color: red;
+}
+.totalMap{
+	margin: 5% 0;
+}
 
-	.fromTopOut
-	{
-		transition: transform 1.0s ease, opacity 1.0s ease;
-		transform: translate(0,-10px);
-		opacity: 0.0;
-	}
+/*animations*/
+
+.fromTopIn
+{
+	transition: transform 1.0s ease, opacity 1.0s ease;
+	transform: translate(0,0);
+	opacity: 1.0;
+}
+
+.fromTopOut
+{
+	transition: transform 1.0s ease, opacity 1.0s ease;
+	transform: translate(0,-10px);
+	opacity: 0.0;
+}
+
+.legend img{
+	width: 10px;
+}
+
+.legend h2 {
+	font-family: 'Rubik';
+	font-size: 12px;
+}
+
+.legend h3 {
+	font-family: 'Rubik';
+	font-size: 10px;
+}
