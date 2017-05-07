@@ -20,6 +20,15 @@
 	  Tabletop.init( { key: 'https://docs.google.com/spreadsheets/d/1eRJDZIT8cCOH-cLCdnL_szUqskf81yDCRBF5Kb0Ku5A/pubhtml',
 	                   callback: function(data, tabletop) { 
 		                    console.log(data);
+		                    console.log(data.length);
+		                    data.forEach(function(entry){
+		                    	//generates content
+		                    	var org= entry['Organization'];
+		                    	var descrip=entry['Description'];
+		                    	var link = entry['Link'];
+		                    	$('#organizations').append('<div class="small-12 large-6 columns org"> <div class="small-12 large-4 columns"> <!--place logo here --> </div> <div class="small-12 large-8 columns"> <h4>'+org+'</h4> <p>'+descrip+'</p> <a href="'+link+'">'+link+'</a> </div> </div>')
+		                    });
+
 	                   },
 	                   simpleSheet: true } )
 	}
@@ -175,39 +184,68 @@
 				</div>
 			</div>
 		</div>
-		<div class="small-12 large-9 large-offset-1 columns">
-			<div data-scroll="toggle(.fromTopIn, .fromTopOut)">	
-				<div class="welcome-2">
-					<div class="two-name-1">2. Applicants are received by a federally-funded resettlement support center.</div>
-					<div class="two-name-a">a. I wish I knew how to code.</div>
-					<div class="two-name-2">3. Applicants go through Biographic Security checks.</div>
-					<ul class="two-name-3">
-						<li>This is the highest level of security checks of any category of traveler to the US</li>
-						<li>This process can be repeated over and over if new information is provided before applicant can proceed</li>
-					</ul>
-					<div class="two-name-4">4. Applicants are interviewed by Dept. of Homeland Security.</div>
-					<ul class="two-name-5">
-						<li>Re-interviews conducted if any additional or concerning information comes up</li>
-						<li>Cases can be placed on hold at this point</li>
-					</ul>
-					<div class="two-name-6">5. Applicants go through a round of Biometric Security checks.</div>
-					<ul class="two-name-7">
-						<li>Fingerprints taken by U.S. government employees</li>
-					</ul>
-					<div class="two-name-8">6. Applicants go through medical checks.</div>
-					<div class="two-name-9">7. Applicants are assigned to resettlement location</div>
+		<div class="row">
+			<div class="small-12 large-11 large-offset-1   columns">
+				<div data-scroll="toggle(.fromTopIn, .fromTopOut)">	
+					<div class="welcome-2">
+						<div class="two-name-1">2. Applicants are received by a federally-funded resettlement support center.</div>
+						<div class="two-name-a">a. I wish I knew how to code.</div>
+						<div class="two-name-2">3. Applicants go through Biographic Security checks.</div>
+						<ul class="two-name-3">
+							<li>This is the highest level of security checks of any category of traveler to the US</li>
+							<li>This process can be repeated over and over if new information is provided before applicant can proceed</li>
+						</ul>
+						<div class="two-name-4">4. Applicants are interviewed by Dept. of Homeland Security.</div>
+						<ul class="two-name-5">
+							<li>Re-interviews conducted if any additional or concerning information comes up</li>
+							<li>Cases can be placed on hold at this point</li>
+						</ul>
+						<div class="two-name-6">5. Applicants go through a round of Biometric Security checks.</div>
+						<ul class="two-name-7">
+							<li>Fingerprints taken by U.S. government employees</li>
+						</ul>
+						<div class="two-name-8">6. Applicants go through medical checks.</div>
+						<div class="two-name-9">7. Applicants are assigned to resettlement location</div>
+					</div>
 				</div>
 			</div>
-		</div>
-		<div class="small-12 large-9 large-offset-1 columns">
-			<div class="welcome-3">
-				<div class="three-10">8. Applicants travel to resettlement locations</div>
-				<div>
-					<img id="home1" class="home-page" src="img/home1.svg">
+			<div class="small-12 large-12 columns">
+				<div class="welcome-3">
+					<div>
+						<img id="home1" class="home-page" src="img/home1.svg">
+					</div>
 				</div>
 			</div>
+
 		</div>
 	</div>
+
+	<div class="row">
+		<div id="takeaction">
+			<h3 class="intro-header">TAKE ACTION</h3>
+			<div id="organizations" class="row"></div>
+			<!-- <div class="small-12 large-6 columns org">
+				<div class="small-12 large-4 columns">
+				</div>
+				<div class="small-12 large-8 columns">
+					<h4>Organization</h4>
+					<p>Description</p>
+					<a href="#">Link</a>
+				</div>
+			</div>
+			<div class="small-12 large-6 columns org">
+				<div class="small-12 large-4 columns">
+				</div>
+				<div class="small-12 large-8 columns">
+					<h4>Organization</h4>
+					<p>Description</p>
+					<a href="#">Link</a>
+				</div>
+			</div> -->
+		</div>
+	</div>
+
+
 
 	<script>
 		var map = new Datamap({
