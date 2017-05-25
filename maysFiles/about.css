@@ -25,14 +25,19 @@ h1 {
 	padding-top: 30px;
 }
 
+/*#container {
+	float:left;
+	clear:left;
+}*/
 
 #left_side {
 	color: black;
 	font-size: 40px;
-	text-align: left;
+	text-align: center;
 	font-family: "brandon-grotesque", Helvetica, sans-serif;
+    padding-top: 10px;
     padding-left: 350px;
-    float: left;
+    width:60%;
 }
 /*
 .oneX {
@@ -53,9 +58,9 @@ h1 {
 	font-size: 20px;
 	text-align: left;
 	font-family: "Courier New", Courier, monospace;
-    padding-right: 250px;
-    float: right;
-    width: 30%;
+    padding-right: 0px;
+  	padding-left: 300px;
+    width:50%;
 }
 
 
