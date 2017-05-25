@@ -1,6 +1,5 @@
 <html>
 <head>
-	<!-- using v3 rather than v4 because datamaps wont operate without it -->
 	<script src="https://d3js.org/d3.v3.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 	<script src="http://d3js.org/topojson.v2.min.js"></script>
@@ -14,40 +13,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Libre+Baskerville" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Rubik:500" rel="stylesheet">
 	<script src="js/ScrollTrigger.min.js"></script>
-	<script>
-
-	function init() {
-		Tabletop.init( { key: 'https://docs.google.com/spreadsheets/d/1eRJDZIT8cCOH-cLCdnL_szUqskf81yDCRBF5Kb0Ku5A/pubhtml',
-			callback: function(data, tabletop) { 
-				console.log(data);
-				console.log(data.length);
-				data.forEach(function(entry){
-		                    	//generates content
-		                    	var org= entry['Organization'];
-		                    	var descrip=entry['Description'];
-		                    	var link = entry['Link'];
-		                    	$('#organizations').append('<div class="small-12 large-5 large-offset-0 columns org"> <div class="small-12 large-4 columns"> <!--place logo here --> </div> <div class="small-12 large-7 columns"> <h4>'+org+'</h4> <p>'+descrip+'</p> <a href="'+link+'">'+link+'</a> </div> </div>')
-		                    });
-
-			},
-			simpleSheet: true } )
-	}
-	window.addEventListener('DOMContentLoaded', init)
-
-	document.addEventListener('DOMContentLoaded', function(){
-		var trigger = new ScrollTrigger({
-			offset: {
-				x: 0,
-				y: 300
-			},
-			   // once: true,
-			   // addHeight: true,
-			   centerHorizontal: true,
-			});
-	}, document.body, window);
-	
-
-	</script>
+	<script src="js/script.js"></script>
 	
 </head>
 <body>
@@ -63,39 +29,19 @@
 				<a class="navlink" href="#intro" onclick="navlinkchange(this)">Intro</a>
 			</li>
 			<li>
-				<a class="navlink" href="#mapstuff" onclick="navlinkchange(this)">Interactive Map</a>
+				<a class="navlink" href="#mapsloc" onclick="navlinkchange(this)">Interactive Map</a>
 			</li>
 			<li>
 				<a class="navlink" href="#stepsto" onclick="navlinkchange(this)">Steps to Become a Refugee</a>
 			</li>
-			<li>
+<!-- 			<li>
 				<a class="navlink" href="#" onclick="navlinkchange(this)">Sources</a>
-			</li>
+			</li> -->
 		</ul>
 	</nav>
 
 	<script>
-	var opentrue = false;
-		//function that creates an X to replace the menu icon, bring out navigation
-		function menuiconchange(element) {
-			//toggles whether or not the class is there based on when it is clicked
-			console.log(element);
-			element.classList.toggle('change');
-			if (opentrue == false) {
-				$(".overlaymenu").fadeIn(50);
-				opentrue = true;
-				$(".bar1,.bar2,.bar3").css("background-color", "white");
-			}
-			else {
-				$(".overlaymenu").fadeOut(50);
-				opentrue = false;
-				$(".bar1,.bar2,.bar3").css("background-color", "black");
-			}
-		}
-		//simulates button click on link click
-		function navlinkchange(stuff) {
-			$('.menuicon').trigger("click");
-		}
+
 
 		</script>
 
@@ -124,7 +70,7 @@
 			</div>
 		</div>
 
-		<div id="mapstuff" class="row map">
+		<div id="mapsloc" class="row map">
 			<div data-scroll="toggle(.fromTopIn, .fromTopOut)">
 				<div class="row">
 					<h3 class="intro-header"> TRACING REFUGEES TO TOMPKINS COUNTY </h3>
@@ -142,13 +88,13 @@
 							<div class="small-12 large-8 columns">
 
 								<div class="littlerefugees">
-									<img class='pic' src='blueman.svg'>
+									<img class='pic' src='img/blueman.svg'>
 								</div>
 							</div>
 							<div class="small-12 large-4 columns">
 								<div class="legend">
 									<div class="small-12 large-4 columns">
-										<img class='pic' src='redman.svg'>
+										<img class='pic' src='img/redman.svg'>
 									</div>
 									<div class="small-12 large-8 columns legend-text">
 										<h2> = 40 </h2>
@@ -262,9 +208,21 @@
 
 
 	<script>
+
+	/* 
+	*
+	*
+	Handles map generation using datamaps and d3
+	API: https://datamaps.github.io/
+		 https://github.com/d3/d3/blob/master/API.md
+	*
+	*
+	*/
+
 	var map = new Datamap({
 		projection: 'mercator',
 		element: document.getElementById("bubbles"),
+		//di
 		setProjection: function(element) {
 		    var projection = d3.geo.equirectangular()
 		      .center([20, -3])
@@ -411,7 +369,6 @@
 			},
 		};
 
-
 		//remove and append this ticker's related data
 		$('.description').empty();
 		$('.description').append("<h1 class='caption'>"+data[value].caption+"</h1><p class='details'>"
@@ -424,13 +381,12 @@
 		val=data[value].bluemen;	 
 		//add little men for numbers of refugees here 
 		for(i=0; i<= val; i++){
-			$('.littlerefugees').append("<img class='pic' src='blueman.svg'>");
+			$('.littlerefugees').append("<img class='pic' src='img/blueman.svg'>");
 		};
 
 		for(i=0; i<data[value].redmen; i++){
-			$('.littlerefugees').append("<img class='pic animated bounceIn' src='redman.svg'>");
+			$('.littlerefugees').append("<img class='pic animated bounceIn' src='img/redman.svg'>");
 		}
-		// console.log(data[value]);
 
 	    // clear bubbles
 	    map.bubbles([]);
@@ -464,8 +420,8 @@
 			}
 			], 
 			{strokeWidth: 2, arcSharpness: 1.4});
-			} 
-			else{
+		} 
+		else {
 		    // clear arcs
 		    map.arc([]);
 		    //draw green arc from selected slider val to Ithaca
@@ -482,6 +438,7 @@
 			{strokeWidth: 2, arcSharpness: 1.4});
 		}
 	}));
+
 </script>
 
 </body>
