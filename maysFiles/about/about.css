@@ -1,8 +1,27 @@
-
+/*
 body {
 	background: #fff;
 	font: 24px/1.6 "brandon-grotesque", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	color: #2e2e2e;
 	-webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
-	-webkit-text-size-adjust: 100%;
+	/*-webkit-text-size-adjust: 100%;
+}
+*/
+
+h1 {
+	color: black;
+	font-size: 54px;
+	text-align: center;
+	font-family: "brandon-grotesque", Helvetica, sans-serif;
+	padding-top: 30px;
+}
+
+p {
+	color: black;
+	font-size: 20px;
+	text-align: left;
+	font-family: "Helvetica Neue", Helvetica, sans-serif;
+    padding-right: 350px;
+    padding-left: 350px;
+    padding-bottom: 20px;
 }

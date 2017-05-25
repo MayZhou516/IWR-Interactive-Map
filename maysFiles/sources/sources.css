@@ -6,7 +6,7 @@ body {
 
 h1 {
 	color: black;
-	font-size: 48px;
+	font-size: 54px;
 	text-align: center;
 	font-family: "brandon-grotesque", Helvetica, sans-serif;
 	padding-top: 30px;
@@ -16,7 +16,7 @@ p {
 	color: black;
 	font-size: 20px;
 	text-align: left;
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: "Helvetica Neue", Helvetica, sans-serif;
     padding-right: 350px;
     padding-left: 350px;
     padding-bottom: 20px;
@@ -35,7 +35,7 @@ h2 {
 	color: black; 
 	font-size: 18px;
 	text-align: left;
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: "Helvetica Neue", Helvetica, sans-serif;
 	padding-right: 225px;
     padding-left: 225px;
 }
@@ -53,7 +53,7 @@ h3 {
 	color: black; 
 	font-size: 18px;
 	text-align: left;
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: "Helvetica Neue", Helvetica, sans-serif;
 	padding-right: 225px;
     padding-left: 225px;
 }
