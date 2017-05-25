@@ -54,8 +54,8 @@ h3 {
     padding-left: 225px;
 }
 
-#sources {
-	background-image: url('img/sources.jpg');
+body {
+	background-image: url('sources.jpg');
 	background-repeat: no-repeat;
     background-attachment: fixed;
 }
