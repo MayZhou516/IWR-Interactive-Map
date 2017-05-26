@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://d3js.org/d3.v3.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+	<script src="http://d3js.org/topojson.v2.min.js"></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js'></script>
+	<script src="js/datamaps.world.min.js"></script>
+	<script src="js/d3.slider.js"></script>
+	<link rel="stylesheet" href="css/about.css" type="text/css">
+	<link rel="stylesheet" href="css/animate.css" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Libre+Baskerville" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Rubik:500" rel="stylesheet">
+	<script src="js/ScrollTrigger.min.js"></script>
+	<script src="js/script.js"></script>
+	<title>About</title>
+</head>
+<body>
+
+	<nav>
+		<div class="menuicon" onclick="menuiconchange(this)">
+			<div class="bar1"></div>
+			<div class="bar2"></div>
+			<div class="bar3"></div>
+		</div>
+
+		<ul class="overlaymenu">
+			<li>
+				<a class="navlink" href="#intro" onclick="navlinkchange(this)">Intro</a>
+			</li>
+			<li>
+				<a class="navlink" href="#mapsloc" onclick="navlinkchange(this)">Interactive Map</a>
+			</li>
+			<li>
+				<a class="navlink" href="#stepsto" onclick="navlinkchange(this)">Steps to Become a Refugee</a>
+			</li>
+			<li>
+				<a class="navlink" href="#takeaction" onclick="navlinkchange(this)">Take Action</a>
+			</li>
+			<li>
+				<a class="navlink" href="./about.html" onclick="navlinkchange(this)">About</a>
+			</li>
+			<li>
+				<a class="navlink" href="./sources.html" onclick="navlinkchange(this)">Sources</a>
+			</li>
+		</ul>
+	</nav>
+	
+	<div id="about">
+		<h1 class="test"> ABOUT </h1>
+		<table>
+			<tr>
+				<td>
+					<div id = "left_side">
+						<img src= "img/iwr_logo.svg" width = 100% height = 100%>
+						<br> <b> X </b> </br>
+						<img src= "img/CUSD_logo.svg" width = 100% height = 100%>
+					</div>
+				</td>
+
+				<td>
+					<div id = "right_side"> In the Spring of 2017, Cornell University Sustainable Design (CUSD) partnered with Ithaca Welcomes Refugees (IWR), a communit organziation that fosters a welcoming environment for refugees who come to the region. Together, we created this website to provide historical and factural information about refugees in Ithaca and to provide some context to the current refugee crisis 
+						<br> <br>
+						<a href="sources.html">Click here</a> to view our sources for infomation collected in this website.
+					</div>
+				</td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>
